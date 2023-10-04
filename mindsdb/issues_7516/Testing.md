@@ -1,14 +1,16 @@
-### [Docs Testing]Test all available commands from "AI Workflow -> Create Projects" section using Python #7516
+### [Docs Testing]Test all available commands from "Create Project using Python" #7516
 
-**Task 1 -> Create Project:**
+**Task 1-> Create Project:**
 <br/>
-case 1: Use the get_project() method to get the default mindsdb project:
+case A: Use the get_project() method to get the default mindsdb project:
 
-**(Note Some of the images may not be rendered properly, please check the asset folder to get the images and they are hinted for each image tag)**
+**(Note Some of the images may not be rendered properly, please check the asset folder to get the images and they are hinted for each image tag 
+by clicking [here](https://github.com/truesoni/hacktoberfest2023/tree/main/mindsdb/issues_7516/assets))**
+</br>
 
-![image_before](mindsdb/issues_7516/assets/test_1_A.png)
+![image_before](https://github.com/truesoni/hacktoberfest2023/blob/main/mindsdb/issues_7516/assets/test_1_A.png)
 
-![image_after](mindsdb/issues_7516/assets/test_1_A_res.png)
+![image_after](https://github.com/truesoni/hacktoberfest2023/blob/main/mindsdb/issues_7516/assets/test_1_A_res.png)
 
 ```
 import mindsdb_sdk
@@ -24,8 +26,7 @@ print(project)
 project(mindsdb)
 ````
 
-case 2: Use the create_project() method to create a new project:
-
+case B: Use the create_project() method to create a new project:
 
 ```
 import mindsdb_sdk
@@ -42,29 +43,31 @@ Output before:
 Project doesn't exist
 ```
 
-
 Output after:
-````
+```
 project('python_sdk_project')
-````
+```
 
-![image_before](mindsdb/issues_7516/assets/test_1_B_before.png)
+</br>
 
-![image_after_editor](mindsdb/issues_7516/assets/test_1_B_after_editor.png)
+![image_before](https://github.com/truesoni/hacktoberfest2023/blob/main/mindsdb/issues_7516/assets/test_1_B_before.png)
 
-![image_after_cloud](mindsdb/issues_7516/assets/test_1_B_after_cloud.png)
+![image_after_editor](https://github.com/truesoni/hacktoberfest2023/blob/main/mindsdb/issues_7516/assets/test_1_B_after_editor.png)
+
+![image_after_cloud](https://github.com/truesoni/hacktoberfest2023/blob/main/mindsdb/issues_7516/assets/test_1_B_after_cloud.png)
 
 
 Command: Remove a Project:<br/>
 Result: Code run successfully<br/>
 
-case 1: when no project exists:
+case A: when no project exists:
+</br>
 
-![image_before](mindsdb/issues_7516/assets/test_1_B_before.png)
+![image_before](https://github.com/truesoni/hacktoberfest2023/blob/main/mindsdb/issues_7516/assets/test_1_B_before.png)
 
-![image_after_editor](mindsdb/issues_7516/assets/test_2_A_before.png)
+![image_after_editor](https://github.com/truesoni/hacktoberfest2023/blob/main/mindsdb/issues_7516/assets/test_2_A_before.png)
 
-![image_after_cloud](mindsdb/issues_7516/assets/test_2_A_after.png)
+![image_after_cloud](https://github.com/truesoni/hacktoberfest2023/blob/main/mindsdb/issues_7516/assets/test_2_A_after.png)
 
 Code:
 ```
@@ -81,8 +84,10 @@ Output:
 ```
 None
 ```
-case 2: 
-Delete an existing Project:<br/>
+case B: Delete an existing Project:
+
+<br/>
+
 Command: DROP PROJECT test using Python<br/>
 Result: Code runs successfully and Project gets deleted<br/>
 
@@ -111,11 +116,14 @@ server = mindsdb_sdk.connect('https://cloud.mindsdb.com', login='username', pass
 project = server.drop_project('project_1')
 print(project_A)
 ```
-![image_before](mindsdb/issues_7516/assets/test_2_B_before_create.png)
 
-![image_after_editor](mindsdb/issues_7516/assets/test_2_B_after_drop.png)
+</br>
 
-![image_after_cloud](mindsdb/issues_7516/assets/test_2_B_after_drop_cloud.png)
+![image_before](https://github.com/truesoni/hacktoberfest2023/blob/main/mindsdb/issues_7516/assets/test_2_B_before_create.png)
+
+![image_after_editor](https://github.com/truesoni/hacktoberfest2023/blob/main/mindsdb/issues_7516/assets/test_2_B_after_drop.png)
+
+![image_after_cloud](https://github.com/truesoni/hacktoberfest2023/blob/main/mindsdb/issues_7516/assets/test_2_B_after_drop_cloud.png)
 
 **Output:**
 ```
@@ -132,9 +140,12 @@ l = server.list_projects()
 
 print(l)
 ```
-![image_before](mindsdb/issues_7516/assets/test_3_before.png)
 
-![image_after_cloud](mindsdb/issues_7516/assets/test_3_after_cloud.png)
+</br>
+
+![image_before](https://github.com/truesoni/hacktoberfest2023/blob/main/mindsdb/issues_7516/assets/test_3_before.png)
+
+![image_after_cloud](https://github.com/truesoni/hacktoberfest2023/blob/main/mindsdb/issues_7516/assets/test_3_after_cloud.png)
 
 **Result: [project(mindsdb), project(Project_2)]**
 
@@ -160,10 +171,12 @@ Output:
 ````
 Query(SELECT * FROM example_db.house_sales)
 ````
-![image_before](mindsdb/issues_7516/assets/test_4_query_cloud_before.png)
 
-![image_after_editor](mindsdb/issues_7516/assets/test_4_query_editor_after.png)
+</br>
 
+![image_before](https://github.com/truesoni/hacktoberfest2023/blob/main/mindsdb/issues_7516/assets/test_4_query_cloud_before.png)
+
+![image_after_editor](https://github.com/truesoni/hacktoberfest2023/blob/main/mindsdb/issues_7516/assets/test_4_query_editor_after.png)
 
 
 ### Result: All the test cases are working fine.
